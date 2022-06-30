@@ -1,8 +1,11 @@
-<!-- <img align="center" src="front-end/src/assets/widget.png" alt="NLW Return"> -->
+<img align="center" src="front-end/src/assets/tela.gif" alt="IgniteLab">
 
 # 📖 Projeto
 
 O projeto foi desenvolvido durante a semana do IgniteLab, evento realizado pela Rocekseat com o intuito de difundir conhecimentos avançados em React.js utilizando tecnologias como GraphQL, GraphCMS, TypeScript e Vite. O projeto consiste em uma plataforma de aulas, muito similar a que foi usada durante o evento, onde o usuário tem acesso a uma nova aula por dia da semana.
+
+# 🌟 Milha extra (desenvolvido por iniciativa própria)
+- Layout Responsivo
 
 ## 🧪 Tecnologias
 
