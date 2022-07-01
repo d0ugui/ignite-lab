@@ -1,4 +1,4 @@
-<img align="center" src="front-end/src/assets/tela.gif" alt="IgniteLab">
+<img align="center" src="src/assets/tela.gif" alt="IgniteLab">
 
 # 📖 Projeto
 
