@@ -1,14 +1,17 @@
+import { useContext } from "react";
 import { DefaultUi, Player, Youtube } from "@vime/react";
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
 
 import "@vime/core/themes/default.css";
 import { useGetLessonBySlugQuery } from "../graphql/generated";
+import { SidebarContext } from "../context/SidebarContext";
 
 interface VideoProps {
   lessonSlug: string;
 }
 
 export function Video({ lessonSlug }: VideoProps) {
+  const { isSidebarVisible } = useContext(SidebarContext);
   const { data } = useGetLessonBySlugQuery({
     variables: {
       slug: lessonSlug
@@ -24,7 +27,7 @@ export function Video({ lessonSlug }: VideoProps) {
   }
 
   return (
-    <div className="flex-1">
+    <div className={`${isSidebarVisible ? 'hidden' : 'block'} flex-1`}>
       <div className="bg-black flex justify-center">
         <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
           <Player>

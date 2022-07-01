@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import { Lesson } from "./Lesson";
 import { useGetLessonsQuery } from "../graphql/generated";
+import { SidebarContext } from "../context/SidebarContext";
+
 
 export function Sidebar() {
   const { data } = useGetLessonsQuery();
+  const { isSidebarVisible } = useContext(SidebarContext);
 
   return (
-    <aside className="w-[348px] bg-gray-700 p-6 border-l border-gray-600 hidden lg:block">
+    <aside className={`${isSidebarVisible ? 'block w-full' : 'hidden'} lg:w-[348px] bg-gray-700 p-6 border-l border-gray-600 lg:block`}>
       <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">
         Cronograma de Aulas
       </span>
